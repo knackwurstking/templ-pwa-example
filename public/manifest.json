@@ -29,8 +29,8 @@
   ],
   "screenshots": [
     {
-      "src": "/static/screenshots/328x626.png",
-      "sizes": "328x626",
+      "src": "/static/screenshots/626x338.png",
+      "sizes": "626x338",
       "type": "image/png",
       "form_factor": "wide",
       "label": "App Preview"
