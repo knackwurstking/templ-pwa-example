@@ -10,7 +10,7 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-//go:embed static/*
+//go:embed static
 var static embed.FS
 
 // NOTE: go:generate npx tailwindcss build -i static/css/style.css -o static/css/tailwindcss -m
@@ -24,8 +24,7 @@ func main() {
 	handler := templ.Handler(index)
 
 	e.GET("/", echo.WrapHandler(handler))
-
-	// TODO: Serve static files
+	e.StaticFS("", static)
 
 	if err := e.Start(":8080"); err != nil {
 		log.Fatalln(err)
