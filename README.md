@@ -9,6 +9,7 @@
     - [Generate templ files](#generate-templ-files)
     - [Generate pwa assets](#generate-pwa-assets)
   - [How I use this repo](#how-i-use-this-repo)
+  - [TODO](#todo)
 
 <!--toc:end-->
 
@@ -46,3 +47,17 @@ make generate-pwa-assets
 
 - Clone with `git clone https://github.com/knackwurstking/templ-pwa-example`
 - Copy all the files from this repo to the new project and let's go
+
+## TODO
+
+- [ ] Test if the app is working without the service worker file
+  - [ ] android
+    - [ ] online
+    - [ ] offline
+  - [ ] iOS
+    - [ ] online
+    - [ ] offline
+  - [ ] macOS, tested with chrome
+    - [ ] online
+    - [ ] offline
+- [ ] Change the app icon
