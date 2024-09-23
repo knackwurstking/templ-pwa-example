@@ -57,7 +57,7 @@ make generate-pwa-assets
   - [ ] iOS
     - [ ] online
     - [ ] offline
-  - [ ] macOS, tested with chrome
-    - [ ] online
+  - [ ] macOS, tested with Chrome
+    - [x] online
     - [ ] offline
 - [ ] Change the app icon
