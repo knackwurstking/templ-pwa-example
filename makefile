@@ -2,7 +2,12 @@
 
 BINARY_NAME=temple-pwa-example
 
+generate-pwa-assets:
+	npx pwa-assets-generator
+
 build:
+	make clean
+	make generate-pwa-assets
 	go mod tidy && \
        	templ generate && \
 		go generate && \

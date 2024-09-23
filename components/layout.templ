@@ -9,14 +9,17 @@ templ Layout(children ...templ.Component) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
     <title>The Spending Log Thingy</title>
-    <link href="/static/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" href="/static/icons/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/static/icons/apple-touch-icon-180x180.png" />
 </head>
 
 <body>
     for _, child := range children {
     @child
     }
-    <script type="module">
+    <!--script type="module">
         function registerServiceWorkers() {
             // Check if the browser supports service workers, otherwise abort.
             if (!("serviceWorker" in navigator)) {
@@ -37,7 +40,7 @@ templ Layout(children ...templ.Component) {
         }
 
         registerServiceWorkers()
-    </script>
+    </script-->
 </body>
 
 </html>
