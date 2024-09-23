@@ -11,8 +11,10 @@ import (
 func main() {
 	e := echo.New()
 
-	greet := components.Greet("Lizzy The Cat", 2)
-	handler := templ.Handler(greet)
+	// greet := components.Greet("Lizzy The Cat", 2)
+	index := components.Index()
+
+	handler := templ.Handler(index)
 
 	e.GET("/", echo.WrapHandler(handler))
 
