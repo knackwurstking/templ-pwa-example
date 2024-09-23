@@ -14,10 +14,9 @@ func main() {
 	greet := components.Greet("Lizzy The Cat", 2)
 	handler := templ.Handler(greet)
 
-	// log.Fatalln(http.ListenAndServe(":8080", handler))
-	e.Server.Handler = handler
+	e.GET("/", echo.WrapHandler(handler))
 
-	if err := e.Start(":1323"); err != nil {
+	if err := e.Start(":8080"); err != nil {
 		log.Fatalln(err)
 	}
 }
