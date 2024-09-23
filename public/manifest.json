@@ -1,0 +1,11 @@
+{
+  "name": "PicoW LED",
+  "short_name": "picow-led",
+  "icons": [],
+  "theme_color": "#09090b",
+  "background_color": "#09090b",
+  "display": "standalone",
+  "scope": ".",
+  "start_url": "./",
+  "orientation": "any"
+}
