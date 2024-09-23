@@ -13,4 +13,4 @@ dev:
 	templ generate --watch --cmd="go run ."
 
 clean:
-		go clean
+	go clean
