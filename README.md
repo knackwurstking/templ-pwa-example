@@ -8,6 +8,7 @@
     - [Project structure](#project-structure)
     - [Generate templ files](#generate-templ-files)
     - [Generate pwa assets](#generate-pwa-assets)
+  - [How I use this repo](#how-i-use-this-repo)
 
 <!--toc:end-->
 
@@ -21,16 +22,13 @@ go install github.com/a-h/templ/cmd/templ@latest
 
 ### Project structure
 
-- `components/` — templ components.
-- `db/` — Database access code used to access the spending logs.
-- `handlers/` — HTTP handlers.
-- `static/` — Files that are available to the public.
-- `services/` — Services used by the handlers.
-- `.gitignore` — Some stuff are not worthy of being committed.
-- `Dockerfile` — Container configuration to run the application with the
-  glorious Docker.
-- `Makefile` — A runner and builder script.
-- `main.go` — The entry point to our application.
+- `components/` — templ components
+- `public/` — Files available to the public
+- `.gitignore` — Some stuff are not worthy of being committed
+- `main.go` — The entry point to our application
+- `Makefile` — A runner and builder script
+- `pwa-assets.config.js` — PWA configuration for the `make generate-pwa-assets`
+  script (`@vite-pwa/assets-generator`)
 
 ### Generate templ files
 
@@ -43,3 +41,8 @@ templ generate
 ```bash
 make generate-pwa-assets
 ```
+
+## How I use this repo
+
+- Clone with `git clone https://github.com/knackwurstking/templ-pwa-example`
+- Copy all the files from this repo to the new project and let's go
