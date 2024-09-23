@@ -27,6 +27,22 @@
       "purpose": "maskable"
     }
   ],
+  "screenshots": [
+    {
+      "src": "/static/screenshots/328x626.png",
+      "sizes": "328x626",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "App Preview"
+    },
+    {
+      "src": "/static/screenshots/328x626.png",
+      "sizes": "328x626",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "App Preview"
+    }
+  ],
   "theme_color": "#09090b",
   "background_color": "#09090b",
   "display": "standalone",
