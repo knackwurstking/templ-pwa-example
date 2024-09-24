@@ -56,10 +56,13 @@ self.addEventListener("fetch", function (event) {
   if (event.request.method !== "GET") {
     return;
   }
+
+  console.debug(`fetch: ${event.request.url}`, event.request);
+
   // Don't try to handle non-secure assets because fetch will fail
-  if (/http:/.test(event.request.url)) {
-    return;
-  }
+  //if (/http:/.test(event.request.url)) {
+  //  return;
+  //}
 
   // Here's where we cache all the things!
   event.respondWith(
@@ -68,9 +71,6 @@ self.addEventListener("fetch", function (event) {
       // Go to the network to ask for that resource
       return fetch(event.request)
         .then(function (networkResponse) {
-          console.debug(`fetch: cache:`, cache);
-          console.debug(`fetch: event.request:`, event.request);
-          console.debug(`fetch: networkResponse:`, networkResponse);
           // Add a copy of the response to the cache (updating the old version)
           // NOTE: Stuff like "chrome-extension" will maybe trigger an error here
           //       because "chrome-extension" is unsupported, i will ignore
