@@ -3,7 +3,13 @@
 BINARY_NAME=temple-pwa-example
 
 generate-pwa-assets:
+	npm install
 	npx pwa-assets-generator
+
+generate-html:
+	make clean
+	make generate-pwa-assets
+	go run . -html ./dist
 
 build:
 	make clean
