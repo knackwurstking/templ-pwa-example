@@ -8,7 +8,7 @@ generate-pwa-assets:
 
 generate-html:
 	make clean
-	rm -r dist/* && \
+	rm -rf dist/* && \
 		go mod tidy && \
 		go run . -html ./dist && \
 		cp -r public/* dist/
