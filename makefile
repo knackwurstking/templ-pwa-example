@@ -20,6 +20,7 @@ build:
 		go generate && \
 		go build -ldflags="-w -s" -o ${BINARY_NAME}
 
+# FIXME: Watcher spits an error: "too many open files"
 dev:
 	make clean
 	go mod tidy && \
