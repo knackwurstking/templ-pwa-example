@@ -11,8 +11,7 @@
     - [Start the dev server](#start-the-dev-server)
     - [Build](#build)
   - [How I use this repo](#how-i-use-this-repo)
-  - [Build Android App [work-in-progress]](#build-android-app-work-in-progress)
-  - [TODO](#todo)
+  - [Build Android App](#build-android-app)
 
 <!--toc:end-->
 
@@ -94,16 +93,3 @@ npx cap open android
 ```
 
 > Edit [capacitor.config.json](capacitor.config.json) to your needs.
-
-## TODO
-
-- [ ] Test PWA
-  - [x] macOS, tested with Chrome (http + https)
-    - [x] online
-    - [x] offline
-  - [ ] android (https only)
-    - [ ] online
-    - [ ] offline
-  - [ ] iOS (https only)
-    - [ ] online
-    - [ ] offline
