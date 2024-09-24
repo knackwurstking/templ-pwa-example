@@ -19,7 +19,7 @@ templ Layout(children ...templ.Component) {
     for _, child := range children {
     @child
     }
-    <!--script type="module">
+    <script type="module">
         function registerServiceWorkers() {
             // Check if the browser supports service workers, otherwise abort.
             if (!("serviceWorker" in navigator)) {
@@ -40,7 +40,7 @@ templ Layout(children ...templ.Component) {
         }
 
         registerServiceWorkers()
-    </script-->
+    </script>
 </body>
 
 </html>
