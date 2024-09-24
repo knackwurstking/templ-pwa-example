@@ -4,23 +4,14 @@
 
 - [PWA (templ) Example](#pwa-templ-example)
   - [Getting Started](#getting-started)
-    - [Installing the templ cli](#installing-the-templ-cli)
-    - [Project structure](#project-structure)
-    - [Build](#build)
-  - [How I use this repo](#how-i-use-this-repo)
   - [Build Android App](#build-android-app)
+  - [How I use this repo](#how-i-use-this-repo)
 
 <!--toc:end-->
 
 ## Getting Started
 
-### Installing the templ cli
-
-```bash
-go install github.com/a-h/templ/cmd/templ@latest
-```
-
-### Project structure
+Project structure
 
 - `components/` — templ components
 - `assets/` — Only used for generating file icons with `capacitor-assets` command
@@ -31,16 +22,45 @@ go install github.com/a-h/templ/cmd/templ@latest
 - `pwa-assets.config.js` — PWA configuration for the `make generate-pwa-assets`
     script (`@vite-pwa/assets-generator`)
 
-### Build
+Install the templ cli
 
-```bash
-make
+```build
+go install github.com/a-h/templ/cmd/templ@latest
 ```
 
-## How I use this repo
+Initialize
 
-- Clone with `git clone https://github.com/knackwurstking/templ-pwa-example`
-- Copy all the files from this repo to the new project and let's go
+```bash
+make init
+```
+
+Build
+
+```bash
+make generate
+make build
+```
+
+Build html and store in "./dist/"
+
+```bash
+make build-html
+```
+
+Build for Android
+
+```bash
+make android-init
+make android-generate-assets
+make android-build
+```
+
+## Files to edit
+
+- [makefile](makefile)
+  - Edit: `BINARY_NAME=`
+  - ... [@TODO]
+- ... [@TODO]
 
 ## Build Android App
 
@@ -73,3 +93,8 @@ npx cap open android
 ```
 
 > Edit [capacitor.config.json](capacitor.config.json) to your needs.
+
+## How I use this repo
+
+- Clone with `git clone https://github.com/knackwurstking/templ-pwa-example`
+- Copy all the files from this repo to the new project and let's go
