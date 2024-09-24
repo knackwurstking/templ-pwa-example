@@ -8,6 +8,8 @@
     - [Project structure](#project-structure)
     - [Generate templ files](#generate-templ-files)
     - [Generate pwa assets](#generate-pwa-assets)
+    - [Start the dev server](#start-the-dev-server)
+    - [Build](#build)
   - [How I use this repo](#how-i-use-this-repo)
   - [TODO](#todo)
 
@@ -41,6 +43,19 @@ templ generate
 
 ```bash
 make generate-pwa-assets
+
+```
+
+### Start the dev server
+
+```bash
+make dev
+```
+
+### Build
+
+```bash
+make
 ```
 
 ## How I use this repo
