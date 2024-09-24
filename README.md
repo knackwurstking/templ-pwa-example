@@ -7,10 +7,11 @@
     - [Installing the templ cli](#installing-the-templ-cli)
     - [Project structure](#project-structure)
     - [Generate templ files](#generate-templ-files)
-    - [Generate pwa assets](#generate-pwa-assets)
+    - [Generate PWA assets](#generate-pwa-assets)
     - [Start the dev server](#start-the-dev-server)
     - [Build](#build)
   - [How I use this repo](#how-i-use-this-repo)
+  - [Build Android App [work-in-progress]](#build-android-app-work-in-progress)
   - [TODO](#todo)
 
 <!--toc:end-->
@@ -39,11 +40,10 @@ go install github.com/a-h/templ/cmd/templ@latest
 templ generate
 ```
 
-### Generate pwa assets
+### Generate PWA assets
 
 ```bash
 make generate-pwa-assets
-
 ```
 
 ### Start the dev server
@@ -63,18 +63,22 @@ make
 - Clone with `git clone https://github.com/knackwurstking/templ-pwa-example`
 - Copy all the files from this repo to the new project and let's go
 
+## Build Android App [work-in-progress]
+
+<!-- TODO: Some short instruction how to build for android -->
+
 ## TODO
 
-- [ ] Add a script for generate html
-  - [ ] Add some stuff to allow a capacitor android build
-- [ ] Test if the app is working without the service worker file
-  - [ ] macOS, tested with Chrome
+- [x] Add a script for generate html
+  - [ ] Add some stuff to allow a capacitor android build [work-in-progress]
+- [ ] Test PWA
+  - [x] macOS, tested with Chrome (http + https)
     - [x] online
     - [x] offline
-  - [ ] android
-    - [ ] online [@TODO: Needs https]
-    - [ ] offline [@TODO: Needs a service-worker]
-  - [ ] iOS
-    - [ ] online [@NOTE: Works without the addressbar, @TODO: Needs https]
-    - [ ] offline [@TODO: Needs a service-worker]
+  - [ ] android (https only)
+    - [ ] online
+    - [ ] offline
+  - [ ] iOS (https only)
+    - [ ] online
+    - [ ] offline
 - [ ] Change the app icon
