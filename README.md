@@ -50,6 +50,8 @@ make generate-pwa-assets
 
 ## TODO
 
+- [ ] Add a script for generate html
+  - [ ] Add some stuff to allow a capacitor android build
 - [ ] Test if the app is working without the service worker file
   - [ ] macOS, tested with Chrome
     - [x] online
