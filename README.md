@@ -51,13 +51,13 @@ make generate-pwa-assets
 ## TODO
 
 - [ ] Test if the app is working without the service worker file
-  - [ ] android
-    - [ ] online
-    - [ ] offline
-  - [ ] iOS
-    - [ ] online
-    - [ ] offline
   - [ ] macOS, tested with Chrome
     - [x] online
-    - [ ] offline
+    - [ ] offline [@TODO: Needs a service-worker]
+  - [ ] android
+    - [ ] online [@TODO: Needs https]
+    - [ ] offline [@TODO: Needs a service-worker]
+  - [ ] iOS
+    - [ ] online [Works without the addressbar, @TODO: Needs https]
+    - [ ] offline [@TODO: Needs a service-worker]
 - [ ] Change the app icon
