@@ -97,10 +97,6 @@ npx cap open android
 
 ## TODO
 
-- [x] Add a script for generate html
-  - [x] Add some stuff to allow a capacitor android build
-- [x] Change the app icon
-  - [x] Update the background color for android assets (dark/light theme)
 - [ ] Test PWA
   - [x] macOS, tested with Chrome (http + https)
     - [x] online
