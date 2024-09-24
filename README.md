@@ -71,6 +71,7 @@ make
 
 - [x] Add a script for generate html
   - [ ] Add some stuff to allow a capacitor android build [work-in-progress]
+- [ ] Change the app icon
 - [ ] Test PWA
   - [x] macOS, tested with Chrome (http + https)
     - [x] online
@@ -81,4 +82,3 @@ make
   - [ ] iOS (https only)
     - [ ] online
     - [ ] offline
-- [ ] Change the app icon
