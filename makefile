@@ -26,7 +26,7 @@ build:
 
 run:
 	go mod tidy && \
-		templ generate --cmd="go run ."
+		go run .
 
 build-html:
 	rm -rf dist/* && \
