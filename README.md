@@ -99,7 +99,7 @@ npx cap open android
 
 - [x] Add a script for generate html
   - [x] Add some stuff to allow a capacitor android build
-- [ ] Change the app icon
+- [x] Change the app icon
 - [ ] Test PWA
   - [x] macOS, tested with Chrome (http + https)
     - [x] online
