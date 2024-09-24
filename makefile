@@ -8,20 +8,23 @@ generate-pwa-assets:
 
 generate-html:
 	make clean
-	make generate-pwa-assets
-	go run . -html ./dist
+	rm -r dist/* && \
+		go mod tidy && \
+		go run . -html ./dist && \
+		cp -r public/* dist/
 
 build:
 	make clean
-	make generate-pwa-assets
 	go mod tidy && \
        	templ generate && \
 		go generate && \
 		go build -ldflags="-w -s" -o ${BINARY_NAME}
 
 dev:
-	templ generate --watch --cmd="go generate" &\
-	templ generate --watch --cmd="go run ."
+	make clean
+	go mod tidy && \
+		templ generate --watch --cmd="go generate" &\
+		templ generate --watch --cmd="go run ."
 
 clean:
 	go clean

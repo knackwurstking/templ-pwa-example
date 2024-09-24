@@ -1,20 +1,18 @@
 package main
 
 import (
+	"context"
 	"embed"
 	"flag"
 	"io/fs"
 	"log"
 	"os"
+	"path/filepath"
 	"templ-pwa-example/components"
 
 	"github.com/a-h/templ"
 	"github.com/fatih/color"
 	"github.com/labstack/echo/v4"
-)
-
-const (
-	ErrorCodeOK = 0
 )
 
 //go:embed public
@@ -26,19 +24,31 @@ func main() {
 	flags := newFlags()
 	flags.Parse()
 
-	if flags.html != "" {
-		// TODO: Render html to destination
+	// greet := components.Greet("Lizzy The Cat", 2)
+	index := components.Index()
 
-		os.Exit(ErrorCodeOK)
+	if flags.html != "" {
+		err := os.MkdirAll(flags.html, os.ModeSticky|os.ModePerm)
+		if err != nil {
+			log.Fatalf("Failed to create directories %s: %v", flags.html, err)
+		}
+
+		f, err := os.Create(filepath.Join(flags.html, "index.html"))
+		if err != nil {
+			log.Fatalf("Failed to create output file: %v", err)
+		}
+
+		err = index.Render(context.Background(), f)
+		if err != nil {
+			log.Fatalf("Failed to write output file: %v", err)
+		}
+
+		os.Exit(0)
 	}
 
 	e := echo.New()
 
-	// greet := components.Greet("Lizzy The Cat", 2)
-	index := components.Index()
-
 	handler := templ.Handler(index)
-
 	e.GET("/", echo.WrapHandler(handler))
 
 	fsys, err := fs.Sub(public, "public")
