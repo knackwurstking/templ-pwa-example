@@ -8,7 +8,6 @@
     - [Project structure](#project-structure)
     - [Generate templ files](#generate-templ-files)
     - [Generate PWA assets](#generate-pwa-assets)
-    - [Start the dev server](#start-the-dev-server)
     - [Build](#build)
   - [How I use this repo](#how-i-use-this-repo)
   - [Build Android App](#build-android-app)
@@ -43,12 +42,6 @@ templ generate
 
 ```bash
 make generate-pwa-assets
-```
-
-### Start the dev server
-
-```bash
-make dev
 ```
 
 ### Build
