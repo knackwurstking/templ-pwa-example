@@ -63,14 +63,42 @@ make
 - Clone with `git clone https://github.com/knackwurstking/templ-pwa-example`
 - Copy all the files from this repo to the new project and let's go
 
-## Build Android App [work-in-progress]
+## Build Android App
 
-<!-- TODO: Some short instruction how to build for android -->
+- <https://capacitorjs.com/docs/getting-started>
+- <https://capacitorjs.com/docs/guides/splash-screens-and-icons>
+
+```bash
+# Install dependencies
+npm i @capacitor/core
+npm i -D @capacitor/cli
+
+# Initialize
+npx cap init
+# Name: Templ PWA Example
+# Package ID: templpwaexample.knackwurstking.com
+# Web asset directory: dist
+
+# Add the android platform
+npm i @capacitor/android
+npx cap add android
+npx cap sync android
+
+# Generate Android icons
+npm install @capacitor/assets --save-dev
+# NOTE: The "./assets/" directory will be used for this
+npx capacitor-assets generate
+
+# Open android studio and edit or build the app
+npx cap open android
+```
+
+> Edit [capacitor.config.json](capacitor.config.json) to your needs.
 
 ## TODO
 
 - [x] Add a script for generate html
-  - [ ] Add some stuff to allow a capacitor android build [work-in-progress]
+  - [x] Add some stuff to allow a capacitor android build
 - [ ] Change the app icon
 - [ ] Test PWA
   - [x] macOS, tested with Chrome (http + https)
