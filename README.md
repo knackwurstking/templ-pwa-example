@@ -87,7 +87,7 @@ npx cap sync android
 # Generate Android icons
 npm install @capacitor/assets --save-dev
 # NOTE: The "./assets/" directory will be used for this
-npx capacitor-assets generate
+npx capacitor-assets generate --android
 
 # Open android studio and edit or build the app
 npx cap open android
