@@ -1,6 +1,6 @@
 .PHONY: build
 
-BINARY_NAME=temple-pwa-example
+BINARY_NAME=templ-pwa-example
 
 generate-pwa-assets:
 	npm install
