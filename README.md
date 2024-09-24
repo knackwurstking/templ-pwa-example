@@ -6,8 +6,6 @@
   - [Getting Started](#getting-started)
     - [Installing the templ cli](#installing-the-templ-cli)
     - [Project structure](#project-structure)
-    - [Generate templ files](#generate-templ-files)
-    - [Generate PWA assets](#generate-pwa-assets)
     - [Build](#build)
   - [How I use this repo](#how-i-use-this-repo)
   - [Build Android App](#build-android-app)
@@ -25,24 +23,13 @@ go install github.com/a-h/templ/cmd/templ@latest
 ### Project structure
 
 - `components/` — templ components
+- `assets/` — Only used for generating file icons with `capacitor-assets` command
 - `public/` — Files available to the public
 - `.gitignore` — Some stuff are not worthy of being committed
 - `main.go` — The entry point to our application
 - `Makefile` — A runner and builder script
 - `pwa-assets.config.js` — PWA configuration for the `make generate-pwa-assets`
-  script (`@vite-pwa/assets-generator`)
-
-### Generate templ files
-
-```bash
-templ generate
-```
-
-### Generate PWA assets
-
-```bash
-make generate-pwa-assets
-```
+    script (`@vite-pwa/assets-generator`)
 
 ### Build
 
