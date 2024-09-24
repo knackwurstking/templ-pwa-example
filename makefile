@@ -10,6 +10,8 @@ generate-html:
 	make clean
 	rm -rf dist/* && \
 		go mod tidy && \
+		templ generate && \
+		go generate && \
 		go run . -html ./dist && \
 		cp -r public/* dist/
 
