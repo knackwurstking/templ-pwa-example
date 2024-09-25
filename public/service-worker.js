@@ -7,16 +7,16 @@ var cacheName = "templ-pwa-example-v1";
 
 // Assets to cache
 var assetsToCache = [
-    "/",
-    "/static/css/styles.css",
-    "/static/icons/apple-touch-icon-180x180.png",
-    "/static/icons/favicon.ico",
-    "/static/icons/icon.png",
-    "/static/icons/maskable-icon-512x512.png",
-    "/static/icons/pwa-192x192.png",
-    "/static/icons/pwa-512x512.png",
-    "/static/icons/pwa-64x64.png",
-    "/static/js/main.js",
+    "",
+    "static/css/styles.css",
+    "static/icons/apple-touch-icon-180x180.png",
+    "static/icons/favicon.ico",
+    "static/icons/icon.png",
+    "static/icons/maskable-icon-512x512.png",
+    "static/icons/pwa-192x192.png",
+    "static/icons/pwa-512x512.png",
+    "static/icons/pwa-64x64.png",
+    "static/js/main.js",
 ];
 
 self.addEventListener("install", function (event) {
@@ -38,7 +38,7 @@ self.addEventListener("install", function (event) {
                 // Together with `Clients.claim()` this allows a worker to take effect
                 // immediately in the client(s).
                 return self.skipWaiting();
-            }),
+            })
     );
 });
 
@@ -84,6 +84,6 @@ self.addEventListener("fetch", function (event) {
                     // to some of our cached resources
                     return cache.match(event.request);
                 });
-        }),
+        })
     );
 });
