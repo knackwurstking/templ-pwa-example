@@ -20,7 +20,7 @@ generate-assets:
 
 build:
 	make generate && \
-		go build -o ${BINARY_NAME}
+		go build -ldflags="-w -s" -o ${BINARY_NAME}
 
 run:
 	go mod tidy && \
