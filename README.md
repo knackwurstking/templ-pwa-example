@@ -1,11 +1,13 @@
 # PWA (templ) Example
 
+> Just some boilerplate code.
+
 <!--toc:start-->
 
 - [PWA (templ) Example](#pwa-templ-example)
   - [Getting Started](#getting-started)
+  - [Files to edit](#files-to-edit)
   - [Build Android App](#build-android-app)
-  - [How I use this repo](#how-i-use-this-repo)
 
 <!--toc:end-->
 
@@ -93,8 +95,3 @@ npx cap open android
 ```
 
 > Edit [capacitor.config.json](capacitor.config.json) to your needs.
-
-## How I use this repo
-
-- Clone with `git clone https://github.com/knackwurstking/templ-pwa-example`
-- Copy all the files from this repo to the new project and let's go
