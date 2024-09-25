@@ -1,0 +1,9 @@
+# .gitignore
+*templ.go
+*templ.txt
+#static/css/tailwind.css
+node_modules/
+templ-pwa-example
+.DS_Store
+dist/
+/icons
