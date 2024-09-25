@@ -3,11 +3,10 @@
 // You have to supply a name for your cache, this will
 // allow us to remove an old one to avoid hitting disk
 // space limits and displaying old resources
-var cacheName = "templ-pwa-example-v1"; // NOTE: Edit this...
+var cacheName = "templ-pwa-example-v1";
 
 // Assets to cache
 var assetsToCache = [
-    // NOTE: Edit this...
     "/",
     "/static/css/styles.css",
     "/static/icons/apple-touch-icon-180x180.png",
