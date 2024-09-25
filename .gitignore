@@ -5,5 +5,4 @@
 node_modules/
 templ-pwa-example
 .DS_Store
-dist/
 /icons
