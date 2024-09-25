@@ -23,7 +23,7 @@ build:
 		go build -ldflags="-w -s" -o ${BINARY_NAME}
 
 run:
-	go mod tidy && \
+	make generate && \
 		go run .
 
 build-html:
