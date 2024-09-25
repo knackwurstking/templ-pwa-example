@@ -95,3 +95,7 @@ npx cap open android
 ```
 
 > Edit [capacitor.config.json](capacitor.config.json) to your needs.
+
+## TODO
+
+- Change PWA app icons background to black
