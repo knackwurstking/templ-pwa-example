@@ -13,34 +13,13 @@ templ Layout(children ...templ.Component) {
     <link rel="manifest" href="/manifest.json" />
     <link rel="icon" href="/static/icons/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/static/icons/apple-touch-icon-180x180.png" />
+    <script src="/static/js/main.js" type="module" defer></script>
 </head>
 
 <body>
     for _, child := range children {
     @child
     }
-    <script type="module">
-        function registerServiceWorkers() {
-            // Check if the browser supports service workers, otherwise abort.
-            if (!("serviceWorker" in navigator)) {
-                console.warn("Browser doesn't support service workers")
-                return
-            }
-
-            window.addEventListener("load", function () {
-                navigator.serviceWorker
-                    .register("/service-worker.js")
-                    .then(function (reg) {
-                        console.info("Service worker registered", reg)
-                    })
-                    .catch(function (err) {
-                        console.error("Service worker registration failed:", err)
-                    })
-            })
-        }
-
-        registerServiceWorkers()
-    </script>
 </body>
 
 </html>
