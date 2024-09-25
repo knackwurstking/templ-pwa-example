@@ -19,10 +19,8 @@ generate-assets:
 	npx pwa-assets-generator
 
 build:
-	go mod tidy && \
-       	templ generate && \
-		go generate && \
-		go build -ldflags="-w -s" -o ${BINARY_NAME}
+	make generate && \
+		go build -o ${BINARY_NAME}
 
 run:
 	go mod tidy && \
