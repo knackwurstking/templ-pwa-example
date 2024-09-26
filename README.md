@@ -6,8 +6,9 @@
 
 - [PWA (templ) Example](#pwa-templ-example)
   - [Getting Started](#getting-started)
-  - [Files to edit](#files-to-edit)
+  - [Search and replace](#search-and-replace)
   - [Build Android App](#build-android-app)
+  - [TODO](#todo)
 
 <!--toc:end-->
 
@@ -57,12 +58,14 @@ make android-generate-assets
 make android-build
 ```
 
-## Files to edit
+## Search and replace
 
-- [makefile](makefile)
-  - Edit: `BINARY_NAME=`
-  - ... [@TODO]
-- ... [@TODO]
+- `templ-pwa-example` — _App (short) name_
+- `Templ PWA Example` — _App name_
+- `A Templ PWA Example` — _HTML title tag_
+- `templ-pwa-example-v1` — Service worker cache name
+
+And update service worker list of cached files [public/service-worker.js](public/service-worker.js)
 
 ## Build Android App
 
